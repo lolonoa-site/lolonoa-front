@@ -38,7 +38,7 @@ export default function Register() {
   const { mutate: registerMutate, isSuccess: isRegisterSuccess } = useMutation({
     mutationFn: () => postRegister(emailInput, passwordInput, nicknameInput),
     onSuccess: (data) => {
-      if (data) {
+      if (data === true) {
         alert("회원가입이 완료되었습니다.");
       } else {
         alert("회원가입 실패");
@@ -69,6 +69,7 @@ export default function Register() {
   const handleEmailVerify = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     fetchEmailExist();
+    // registerMutate();
   };
 
   const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -106,7 +107,7 @@ export default function Register() {
   return (
     <div className="w-full max-w-[500px] h-auto flex flex-col items-center pt-[40px] pb-[70px] box-border bg-white/[.10] rounded-[6px]">
       <Logo className="w-auto h-[110px]" />
-      <form action="" className="flex flex-col w-[66%]">
+      <div className="flex flex-col w-[66%]">
         <span className="text-white text-[14px] mt-[20px]">회원가입</span>
         <input
           type="text"
@@ -160,7 +161,7 @@ export default function Register() {
         >
           회원가입
         </button>
-      </form>
+      </div>
     </div>
   );
 }
