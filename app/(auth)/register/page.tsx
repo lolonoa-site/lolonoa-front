@@ -90,6 +90,10 @@ export default function Register() {
 
   const handleEmailVerify = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
+    if (emailInput == "") {
+      alert("이메일을 기입해주세요");
+      return;
+    }
     fetchEmailExist();
   };
 
