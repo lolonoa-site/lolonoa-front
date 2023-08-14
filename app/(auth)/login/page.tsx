@@ -52,7 +52,7 @@ export default function Login() {
         <span className="text-white text-[14px] mt-[20px]">로그인</span>
         <input
           type="text"
-          className="mt-[24px] h-[40px] w-full border-0 border-b-[1px] border-white border-solid placeholder:text-white placeholder:text-[14px] text-[14px] focus:ring-white bg-transparent focus:outline-none"
+          className="mt-[24px] h-[40px] w-full border-0 border-b-[1px] border-white border-solid placeholder:text-white placeholder:text-[14px] text-[14px] focus:ring-white bg-transparent focus:outline-none appearance-none rounded-0"
           placeholder="이메일"
           value={emailInput}
           onChange={emailInputOnChange}
@@ -60,14 +60,14 @@ export default function Login() {
 
         <input
           type="password"
-          className="mt-[30px] h-[40px] w-full border-0 border-b-[1px] border-white border-solid placeholder:text-white placeholder:text-[14px] text-[14px] focus:ring-white bg-transparent focus:outline-none"
+          className="mt-[30px] h-[40px] w-full border-0 border-b-[1px] border-white border-solid placeholder:text-white placeholder:text-[14px] text-[14px] focus:ring-white bg-transparent focus:outline-none appearance-none rounded-0"
           placeholder="비밀번호"
           value={passwordInput}
           onChange={passwordInputOnChange}
         />
         <button
           onClick={handleLogin}
-          className="mt-[50px] mb-[20px] h-[50px] w-full rounded-[6px] bg-teal outline-0"
+          className="mt-[50px] mb-[20px] h-[50px] w-full rounded-[6px] bg-teal outline-0 appearance-none"
         >
           로그인
         </button>

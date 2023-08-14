@@ -135,7 +135,7 @@ export default function Register() {
           <span className="text-white text-[14px] mt-[20px]">회원가입</span>
           <input
             type="text"
-            className="mt-[30px] h-[40px] w-full border-0 border-b-[1px] border-white border-solid placeholder:text-white placeholder:text-[14px] text-[14px] focus:ring-white bg-transparent focus:outline-none"
+            className="mt-[30px] h-[40px] w-full border-0 border-b-[1px] border-white border-solid placeholder:text-white placeholder:text-[14px] text-[14px] focus:ring-white bg-transparent focus:outline-none  appearance-none rounded-0"
             placeholder="닉네임"
             value={nicknameInput}
             onChange={nicknameInputOnChange}
@@ -143,14 +143,14 @@ export default function Register() {
           <div className="flex mt-[24px] justify-between">
             <input
               type="text"
-              className="h-[40px] w-[70%] border-0 border-b-[1px] border-white border-solid placeholder:text-white placeholder:text-[14px] text-[14px] focus:ring-white bg-transparent focus:outline-none"
+              className="h-[40px] w-[70%] border-0 border-b-[1px] border-white border-solid placeholder:text-white placeholder:text-[14px] text-[14px] focus:ring-white bg-transparent focus:outline-none appearance-none rounded-0"
               placeholder="이메일"
               value={emailInput}
               onChange={emailInputOnChange}
             />
             <button
               onClick={handleEmailVerify}
-              className="w-[20%] h-[40px] rounded-[6px] border-[1px] border-teal text-teal text-[14px] outline-0"
+              className="w-[20%] h-[40px] rounded-[6px] border-[1px] border-teal text-teal text-[14px] outline-0 appearance-none"
             >
               인증
             </button>
@@ -158,7 +158,7 @@ export default function Register() {
           {emailSendData ? (
             <input
               type="text"
-              className="mt-[30px] h-[40px] w-full border-0 border-b-[1px] border-white border-solid placeholder:text-white placeholder:text-[14px] text-[14px] focus:ring-white bg-transparent focus:outline-none"
+              className="mt-[30px] h-[40px] w-full border-0 border-b-[1px] border-white border-solid placeholder:text-white placeholder:text-[14px] text-[14px] focus:ring-white bg-transparent focus:outline-none appearance-none rounded-0"
               placeholder="인증코드"
               value={codeInput}
               onChange={codeInputOnChange}
@@ -167,21 +167,21 @@ export default function Register() {
 
           <input
             type="password"
-            className="mt-[30px] h-[40px] w-full border-0 border-b-[1px] border-white border-solid placeholder:text-white placeholder:text-[14px] text-[14px] focus:ring-white bg-transparent focus:outline-none"
+            className="mt-[30px] h-[40px] w-full border-0 border-b-[1px] border-white border-solid placeholder:text-white placeholder:text-[14px] text-[14px] focus:ring-white bg-transparent focus:outline-none appearance-none rounded-0"
             placeholder="비밀번호"
             value={passwordInput}
             onChange={passwordInputOnChange}
           />
           <input
             type="password"
-            className="mt-[30px] h-[40px] w-full border-0 border-b-[1px] border-white border-solid placeholder:text-white placeholder:text-[14px] text-[14px] focus:ring-white bg-transparent focus:outline-none"
+            className="mt-[30px] h-[40px] w-full border-0 border-b-[1px] border-white border-solid placeholder:text-white placeholder:text-[14px] text-[14px] focus:ring-white bg-transparent focus:outline-none appearance-none rounded-0"
             placeholder="비밀번호 확인"
             value={passwordVerifyInput}
             onChange={passwordVerifyInputOnChange}
           />
           <button
             onClick={handleSubmit}
-            className="mt-[50px] mb-[20px] h-[50px] text-white w-full rounded-[6px] bg-teal outline-0"
+            className="mt-[50px] mb-[20px] h-[50px] text-white w-full rounded-[6px] bg-teal outline-0 appearance-none"
           >
             회원가입
           </button>
