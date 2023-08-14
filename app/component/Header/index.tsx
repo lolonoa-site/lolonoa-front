@@ -40,7 +40,10 @@ const Header = ({ className }: Props) => {
         {/* <button className="vertical-end text-[14px]" onClick={() => {}}>
           로그인을 해주세요
         </button> */}
-        <Link href={"/login"} className="text-[14px] flex items-center">
+        <Link
+          href={"/login"}
+          className="text-[14px] flex items-center text-white"
+        >
           로그인을 해주세요
         </Link>
         <div className="h-[24px] flex item-start">
