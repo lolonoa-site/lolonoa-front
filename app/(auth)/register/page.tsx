@@ -68,7 +68,11 @@ export default function Register() {
     },
   });
 
-  const { data: emailVerify, refetch: fetchEmailVerify } = useQuery({
+  const {
+    data: emailVerify,
+    refetch: fetchEmailVerify,
+    isLoading: isEmailVerifyLoading,
+  } = useQuery({
     queryKey: ["emailVerify"],
     queryFn: () => getEmailVerify(emailInput, Number(codeInput)),
     enabled: false,
@@ -78,6 +82,9 @@ export default function Register() {
       } else {
         register();
       }
+    },
+    onError(err) {
+      alert(err);
     },
   });
 
@@ -114,7 +121,7 @@ export default function Register() {
 
   return (
     <>
-      {isEmailSendLoading || isRegisterLoading ? (
+      {isEmailSendLoading || isRegisterLoading || isEmailVerifyLoading ? (
         <div className="top-0 fixed w-full h-full bg-[#000000]/[.3] z-50" />
       ) : null}
 
@@ -139,7 +146,7 @@ export default function Register() {
             />
             <button
               onClick={handleEmailVerify}
-              className="w-[20%] h-[40px] rounded-[6px] border-[1px] border-teal text-teal text-[14px]"
+              className="w-[20%] h-[40px] rounded-[6px] border-[1px] border-teal text-teal text-[14px] outline-0"
             >
               인증
             </button>
@@ -170,7 +177,7 @@ export default function Register() {
           />
           <button
             onClick={handleSubmit}
-            className="mt-[50px] mb-[20px] h-[50px] text-white w-full rounded-[6px] bg-teal"
+            className="mt-[50px] mb-[20px] h-[50px] text-white w-full rounded-[6px] bg-teal outline-0"
           >
             회원가입
           </button>
