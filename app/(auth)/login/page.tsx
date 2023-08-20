@@ -68,7 +68,7 @@ export default function Login() {
         />
         <button
           onClick={handleLogin}
-          className="mt-[50px] mb-[20px] h-[50px] w-full rounded-[6px] bg-teal outline-0 appearance-none"
+          className="mt-[50px] mb-[20px] h-[50px] w-full rounded-[6px] bg-teal text-white outline-0 appearance-none"
         >
           로그인
         </button>

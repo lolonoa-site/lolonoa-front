@@ -19,7 +19,7 @@ const Nav = ({ className }: Props) => {
             <Link
               key={nav.name}
               href={nav.url}
-              className="text-[14px] font-bold whitespace-nowrap"
+              className="text-[14px] text-white font-bold whitespace-nowrap"
             >
               {nav.name}
             </Link>
