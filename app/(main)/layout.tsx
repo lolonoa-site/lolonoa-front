@@ -20,9 +20,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full w-full">
       <body className="h-full w-full">
-        <div className="h-full w-full grid grid-cols-12 auto-rows-auto gap-x-[2rem] p-[8px] h-auto items-start p-0 m-0 bg-navy">
-          <Header className="row-start-1 col-start-3 col-span-8 mt-33px"></Header>
-          {children}
+        <div className="w-full h-full bg-navy">
+          <div className="w-full p-[1rem] grid grid-cols-4 auto-rows-auto gap-x-[1rem] p-[8px] h-auto items-start m-0 bg-navy sm:grid-cols-8 lg:grid-cols-12 lg:gap-x-[2rem] lg:p-[2rem]">
+            <Header className="row-start-1 col-start-1 col-span-4 mt-33px bg-navy sm:col-start-1 sm:col-span-8 lg:col-start-3 lg:col-span-8"></Header>
+            {children}
+          </div>
         </div>
       </body>
     </html>

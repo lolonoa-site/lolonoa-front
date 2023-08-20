@@ -22,6 +22,7 @@ export default function Login() {
     mutationFn: () => postLogin(emailInput, passwordInput),
 
     onSuccess(data) {
+      console.log(data);
       if (data?.token?.access_token) {
         console.log(data);
         alert(`반갑습니다 ${data.nickname}님.`);

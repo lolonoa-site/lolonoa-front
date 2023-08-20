@@ -33,7 +33,7 @@ const Header = ({ className }: Props) => {
 
   return (
     <div
-      className={`${className} grid grid-cols-8 auto-rows-auto gap-x-[2rem] items-center gap-[2rem] justify-between`}
+      className={`${className} grid grid-cols-4 auto-rows-auto gap-x-[2rem] items-center gap-[2rem] justify-between sm:grid-cols-8 sm:gap-x-[1rem] lg:grid-cols-8 lg:gap-x-[1rem]`}
     >
       <Logo className="col-span-1 max-h-[64px] w-auto"></Logo>
       <div className="col-span-2 col-end-[-1] flex gap-[2rem] justify-end">
@@ -42,7 +42,7 @@ const Header = ({ className }: Props) => {
         </button> */}
         <Link
           href={"/login"}
-          className="text-[14px] flex items-center text-white"
+          className="text-[14px] flex items-center text-white hidden lg:block"
         >
           로그인을 해주세요
         </Link>
