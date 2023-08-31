@@ -90,12 +90,12 @@ const InputText = ({ className, autoFocus, value, onChange }: Props) => {
 
   return (
     <div
-      className={`${className} flex relative h-auto rounded-[1000px] bg-white p-[17px]`}
+      className={`${className} flex relative h-auto rounded-[1000px] bg-white p-[12px]`}
     >
       <span
         className={`${
           isTyping
-            ? "scale-[0.75] translate-y-[-1.2rem]"
+            ? "scale-[0.70] translate-y-[-1.2rem]"
             : "scale-100 translate-y-0"
         } absolute select-none left-[28px] leading-[2.2rem] text-[14px] text-gray-500 transition-all duration-100 ease-linear origin-left z-30`}
       >
@@ -105,13 +105,13 @@ const InputText = ({ className, autoFocus, value, onChange }: Props) => {
         <input
           ref={inputRef}
           type="text"
-          className="appearance-none w-[80%] h-[2.2rem] bg-white rounded-0 outline-none z-20 text-navy p-[9px]"
+          className="appearance-none w-[80%] h-[2.2rem] bg-white rounded-0 outline-none z-20 text-navy p-[14px]"
           value={value}
           onChange={onChange}
         />
         <button
           type="submit"
-          className="appearance-none rounded-[100px] bg-pink absolute right-[16px] top-[calc(50%-25px)] w-[50px] h-[50px] flex justify-center items-center"
+          className="appearance-none rounded-[100px] bg-orange absolute right-[10px] top-[calc(50%-21.5px)] w-[43px] h-[43px] flex justify-center items-center"
         >
           <Image src={Search} alt="search" />
         </button>

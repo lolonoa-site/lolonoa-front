@@ -7,11 +7,15 @@ import { useInput } from "@/app/hooks/useInput";
 import { useMutation } from "react-query";
 import { postLogin } from "@/app/api/auth";
 import { useRouter } from "next/navigation";
+import { useRecoilState } from "recoil";
+import { User, userState } from "@/app/recoil/userState";
 
 export default function Login() {
   const { value: emailInput, onChange: emailInputOnChange } = useInput("");
   const { value: passwordInput, onChange: passwordInputOnChange } =
     useInput("");
+  const [user, setUser] = useRecoilState(userState);
+
   const router = useRouter();
 
   const {
@@ -26,6 +30,15 @@ export default function Login() {
       if (data?.token?.access_token) {
         console.log(data);
         alert(`반갑습니다 ${data.nickname}님.`);
+        // localStorage.setItem("LAT", data.token.access_token);
+        // localStorage.setItem("LRT", data.token.refresh_token);
+        setUser({
+          account: data.account,
+          nickname: data.nickname,
+          access_token: data.token.access_token,
+          refresh_token: data.token.refresh_token,
+          logined: true,
+        } as User);
         router.push("/");
       } else {
         alert("이메일 또는 비밀번호가 맞지 않습니다.");
