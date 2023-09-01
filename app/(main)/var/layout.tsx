@@ -18,7 +18,7 @@ export default function VarLayout({ children }: Props) {
   return (
     <>
       <Input
-        className="col-start-3 col-span-2 row-start-3 origin-right scale-[0.7] mt-[2rem] mb-[0.5rem] sm:col-start-5 sm:col-span-3 lg:col-start-7 lg:col-span-3 xl:col-start-7 xl:col-span-2"
+        className="col-start-2 col-span-3 row-start-3 origin-right scale-[0.7] mt-[2rem] mb-[0.5rem] sm:col-start-5 sm:col-span-3 lg:col-start-8 lg:col-span-3 xl:col-start-7 xl:col-span-2"
         autoFocus={false}
         value={nameInput}
         onChange={nameInputOnChange}
