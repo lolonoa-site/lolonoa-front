@@ -1,8 +1,19 @@
 "use client";
 
+import Input from "@/app/component/Input";
+import { useInput } from "@/app/hooks/useInput";
 import React from "react";
+import ProfileCard from "./component/ProfileCard";
+import MenuCard from "./component/MenuCard";
 
-export default function Var() {
+export default function VarPage() {
   //   const router = useRouter();
-  return <div>롤문철 페이지</div>;
+
+  const { value: nameInput, onChange: nameInputOnChange } = useInput("");
+
+  return (
+    <>
+      <MenuCard className="col-start-1 col-span-4 row-start-4 sm:col-start-3 lg:col-start-5"></MenuCard>
+    </>
+  );
 }

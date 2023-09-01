@@ -57,7 +57,7 @@ const Header = ({ className }: Props) => {
         </button> */}
         {user.logined ? (
           <Link
-            href={"/user"}
+            href={"/login"}
             className="text-[14px] flex items-center text-white hidden lg:block"
           >
             {status}

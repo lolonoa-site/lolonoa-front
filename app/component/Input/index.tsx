@@ -90,7 +90,7 @@ const InputText = ({ className, autoFocus, value, onChange }: Props) => {
 
   return (
     <div
-      className={`${className} flex relative h-auto rounded-[1000px] bg-white p-[12px]`}
+      className={`${className} flex relative h-auto rounded-[1000px] bg-white p-[12px] border-box`}
     >
       <span
         className={`${
@@ -105,7 +105,7 @@ const InputText = ({ className, autoFocus, value, onChange }: Props) => {
         <input
           ref={inputRef}
           type="text"
-          className="appearance-none w-[80%] h-[2.2rem] bg-white rounded-0 outline-none z-20 text-navy p-[14px]"
+          className="appearance-none w-[80%] h-[2.2rem] bg-white rounded-0 outline-none z-20 text-navy p-[14px] border-box"
           value={value}
           onChange={onChange}
         />
