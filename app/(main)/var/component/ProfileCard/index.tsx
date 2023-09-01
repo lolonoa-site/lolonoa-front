@@ -24,7 +24,7 @@ const ProfileCard = ({ className }: Props) => {
     >
       {clientUser?.logined ? (
         <>
-          <span className="row-start-1 text-[18px] text-[#000000] font-bold">
+          <span className="row-start-1 text-[18px] text-black font-bold">
             {clientUser?.nickname}
           </span>
 

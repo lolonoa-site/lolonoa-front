@@ -26,6 +26,7 @@ module.exports = {
       },
       pink: "#FF2E63",
       orange: "#FD6504",
+      black: "#525353",
     },
   },
   plugins: [],
