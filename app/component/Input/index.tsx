@@ -97,7 +97,7 @@ const InputText = ({ className, autoFocus, value, onChange }: Props) => {
           isTyping
             ? "scale-[0.70] translate-y-[-1.2rem]"
             : "scale-100 translate-y-0"
-        } absolute select-none left-[28px] leading-[2.2rem] text-[14px] text-gray-500 transition-all duration-100 ease-linear origin-left z-30`}
+        } absolute select-none pointer-events-none left-[28px] leading-[2.2rem] text-[14px] text-gray-500 transition-all duration-100 ease-linear origin-left z-30`}
       >
         소환사명
       </span>
