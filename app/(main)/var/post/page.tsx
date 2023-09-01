@@ -54,7 +54,7 @@ export default function VarPost() {
         required
         name="category"
         onChange={categoryOnChange}
-        className="text-black bg-[#f8f9fa] py-[8px] px-[12px] border rounded-[4px] mt-[1rem] outline-none appearance-none bg-[url('/icon/expand-arrow.png')] bg-no-repeat bg-[length:14px] bg-[center_right_9%] bg-center pr-[28px]"
+        className="text-black bg-[#f8f9fa] py-[8px] px-[12px] border rounded-[4px] mt-[1rem] outline-none appearance-none bg-[url('/icon/expand-arrow.png')] bg-no-repeat bg-[length:14px] bg-[center_right_9%] pr-[28px]"
       >
         <option value="" disabled hidden>
           카테고리
