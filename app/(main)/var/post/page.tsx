@@ -20,7 +20,7 @@ import { quotePlugin } from "@mdxeditor/editor/plugins/quote";
 import { listsPlugin } from "@mdxeditor/editor/plugins/lists";
 import { thematicBreakPlugin } from "@mdxeditor/editor/plugins/thematic-break";
 
-export let DynamicMDXEditor = dynamic(
+const DynamicMDXEditor = dynamic(
   // preferred way
   () => import("./component/Editor"),
   // legacy, larger bundle
@@ -40,14 +40,14 @@ export default function VarPost() {
   const refs = useRef<MDXEditorMethods>(null);
 
   return (
-    <div className="col-start-1 col-span-4 row-start-4 sm:col-start-2 sm:col-span-6 lg:col-start-5 lg:col-span-6 lg:col-start-4 xl:col-span-4">
+    <div className="col-start-1 col-span-4 row-start-4 sm:col-start-2 sm:col-span-6 lg:col-start-5 lg:col-span-6 lg:col-start-4 xl:col-span-4 bg-[#f8f9fa] text-[12px] rounded-[6px]">
       {/* <span>안녕하세요</span> */}
       {/* <MenuCard className="col-start-1 col-span-4 row-start-4 mt-[0.5rem] sm:col-start-3 lg:col-start-5"></MenuCard> */}
       <ForwardedRefMDXEditor
         ref={refs}
         onChange={() => {}}
         markdown=""
-        className=" bg-white rounded-[6px]"
+        className="rounded-[6px]"
         plugins={[
           imagePlugin({
             imageUploadHandler: () => {
