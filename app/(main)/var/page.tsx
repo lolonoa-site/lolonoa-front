@@ -13,7 +13,7 @@ export default function VarPage() {
 
   return (
     <>
-      <MenuCard className="col-start-1 col-span-4 row-start-4 sm:col-start-3 lg:col-start-5"></MenuCard>
+      <MenuCard className="col-start-1 col-span-4 row-start-4 sm:col-start-2 sm:col-span-6 lg:col-start-3 lg:col-span-8  xl:col-span-6 xl:col-start-4"></MenuCard>
     </>
   );
 }

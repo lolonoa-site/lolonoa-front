@@ -45,7 +45,7 @@ export default function VarPost() {
   const refs = useRef<MDXEditorMethods>(null);
 
   return (
-    <div className="flex flex-col items-start col-start-1 col-span-4 row-start-4 sm:col-start-2 sm:col-span-6 lg:col-start-5 lg:col-span-6 lg:col-start-4 xl:col-span-4 bg-[#f8f9fa] text-[13px] p-[16px] rounded-[6px]">
+    <div className="flex flex-col items-start col-start-1 col-span-4 row-start-4 sm:col-start-2 sm:col-span-6 lg:col-start-5 lg:col-span-6 lg:col-start-4 xl:col-span-6 xl:col-start-4 bg-[#f8f9fa] text-[13px] p-[16px] rounded-[6px]">
       <span className="text-black text-[14px] font-bold">글 쓰기</span>
 
       {/* <MenuCard className="col-start-1 col-span-4 row-start-4 mt-[0.5rem] sm:col-start-3 lg:col-start-5"></MenuCard> */}

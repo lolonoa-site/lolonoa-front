@@ -27,7 +27,7 @@ export default function RootLayout({
         <body className="h-full w-full">
           <div className="w-full h-full bg-navy">
             <div className="w-full p-[1rem] grid grid-cols-4 auto-rows-auto gap-x-[1rem] p-[8px] px-[1rem] border-box h-auto items-start m-0 bg-navy sm:grid-cols-8 lg:grid-cols-12 lg:gap-x-[2rem] lg:px-[2rem]">
-              <Header className="row-start-1 col-start-1 col-span-4 mt-33px bg-navy sm:col-start-1 sm:col-span-8 lg:col-start-3 lg:col-span-8"></Header>
+              <Header className="row-start-1 col-start-1 col-span-4 mt-33px bg-navy sm:col-start-1 sm:col-span-8 lg:col-start-3 lg:col-span-8 xl:col-start-2 xl:col-span-10"></Header>
               <QueryClientWrapper>
                 <AuthChecker />
                 {children}
