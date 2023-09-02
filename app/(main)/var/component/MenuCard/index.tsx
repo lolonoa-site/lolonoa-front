@@ -60,7 +60,7 @@ const MenuCard = ({ className }: Props) => {
           {/* <Image src={Search} alt="search" className="fill-[#97A0A7]" /> */}
         </button>
       </form>
-      <div className="w-full row-start-3 col-start-1 col-span-1 flex gap-[20px] mt-[12px]">
+      <div className="w-full row-start-4 col-start-1 col-span-2 flex gap-[20px] mt-[12px] sm:row-start-3 sm:col-span-1">
         <button className="appearance-none outline-none flex items-center gap-[6px]">
           <Popular fill={"#97A0A7"} />
           <span className={`text-[14px] text-gray-900 font-bold`}>인기</span>
@@ -74,7 +74,7 @@ const MenuCard = ({ className }: Props) => {
           <span className={`text-[14px] text-gray-900 font-bold`}>TOP</span>
         </button> */}
       </div>
-      <div className="row-start-2 col-start-2 col-span-1 flex gap-[10px] mt-[10px] items-center justify-end">
+      <div className="row-start-2 col-start-1 col-span-2 flex gap-[10px] mt-[10px] items-center justify-start sm:col-start-2 sm:col-span-1 sm:justify-end">
         <PositionSelect
           className=""
           value={positionA}
@@ -91,7 +91,7 @@ const MenuCard = ({ className }: Props) => {
           onToggle={onToggleB}
         />
       </div>
-      <div className="row-start-2 col-start-1 place-self-start col-span-1 flex gap-[10px] mt-[10px] items-center justify-end sm:row-start-3 sm:col-start-2 sm:place-self-end">
+      <div className="row-start-3 col-start-1 place-self-start col-span-2 flex gap-[10px] mt-[10px] items-center justify-end sm:row-start-3 sm:col-start-2 sm:place-self-end sm:col-span-1">
         <TierSelect
           className=""
           value={tierStart}
