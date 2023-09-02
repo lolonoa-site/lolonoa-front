@@ -113,7 +113,7 @@ const InputText = ({ className, autoFocus, value, onChange }: Props) => {
           type="submit"
           className="appearance-none rounded-[100px] bg-orange absolute right-[10px] top-[calc(50%-21.5px)] w-[43px] h-[43px] flex justify-center items-center"
         >
-          <Image src={Search} alt="search" />
+          <Search fill={"#DDDDDD"} />
         </button>
       </form>
     </div>
