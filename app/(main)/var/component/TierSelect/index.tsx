@@ -72,7 +72,7 @@ const TierSelect = ({
   onToggle,
 }: Props) => {
   return (
-    <div className="place-self-start relative">
+    <div className={`${className} place-self-start relative`}>
       <OutsideClickHandler
         onOutsideClick={() => {
           if (toggle) onToggle();
@@ -83,7 +83,7 @@ const TierSelect = ({
           className="flex gap-[9px] items-center rounded-[100px] bg-gray-200 px-[12px] py-[4px] "
         >
           {<Image src={tiers[value as Tier]} width={24} height={24} alt="" />}
-          <Down className="" />
+          <Down className="min-w-[7px]" />
         </button>
         <ul
           onClick={onChange}
@@ -103,7 +103,7 @@ const TierSelect = ({
                   alt=""
                   width={24}
                   height={24}
-                  className="pointer-events-none select-none"
+                  className="pointer-events-none select-none min-w-[24px]"
                 />
               </li>
             );

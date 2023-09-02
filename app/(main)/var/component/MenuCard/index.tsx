@@ -41,7 +41,7 @@ const MenuCard = ({ className }: Props) => {
 
   return (
     <div
-      className={`${className} bg-white pt-[22px] pr-[23px] pb-[10px] pl-[36px] grid grid-cols-2 auto-rows-auto gap-x-[20px] rounded-[6px]`}
+      className={`${className} bg-white pt-[22px] pr-[23px] pb-[18px] pl-[23px] grid grid-cols-2 auto-rows-auto gap-x-[20px] rounded-[6px] sm:pl-[36px]`}
     >
       <span className="row-start-1 col-start-1 col-span-1 text-[17px] text-black font-bold">
         실시간 롤문철
@@ -49,7 +49,7 @@ const MenuCard = ({ className }: Props) => {
       <form className="relative w-full place-self-start flex justify-end">
         <input
           type="text"
-          placeholder="제목, 내용, 작성자"
+          placeholder="검색"
           className="w-full max-w-[280px] row-start-1 col-start-2 col-span-1 bg-gray-200 py-[6px] pl-[16px] text-black outline-none appearance-none rounded-[8px] text-[14px]"
         />
         <button
@@ -60,7 +60,7 @@ const MenuCard = ({ className }: Props) => {
           {/* <Image src={Search} alt="search" className="fill-[#97A0A7]" /> */}
         </button>
       </form>
-      <div className="w-full row-start-3 col-start-1 col-span-1 flex gap-[20px]">
+      <div className="w-full row-start-3 col-start-1 col-span-1 flex gap-[20px] mt-[12px]">
         <button className="appearance-none outline-none flex items-center gap-[6px]">
           <Popular fill={"#97A0A7"} />
           <span className={`text-[14px] text-gray-900 font-bold`}>인기</span>
@@ -91,7 +91,7 @@ const MenuCard = ({ className }: Props) => {
           onToggle={onToggleB}
         />
       </div>
-      <div className="row-start-3 col-start-2 col-span-1 flex gap-[10px] mt-[10px] items-center justify-end">
+      <div className="row-start-2 col-start-1 place-self-start col-span-1 flex gap-[10px] mt-[10px] items-center justify-end sm:row-start-3 sm:col-start-2 sm:place-self-end">
         <TierSelect
           className=""
           value={tierStart}
