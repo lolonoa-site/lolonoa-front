@@ -44,7 +44,7 @@ export const AuthChecker = () => {
     if (user.access_token !== null) {
       //엑세스 토큰이 localStorage에 존재
       const decoded_at: jose.JWTPayload = jose.decodeJwt(user.access_token);
-      if ((decoded_at.exp as number) < new Date().getMilliseconds()) {
+      if ((decoded_at.exp as number) < Date.now()) {
         alert("토큰이 만료되었습니다.");
         // resetUser();
         refreshTokenMutate();
