@@ -21,6 +21,7 @@ export const AuthChecker = () => {
         user.access_token as string,
         user.refresh_token as string
       ).then((res) => {
+        // console.log(res);
         setUser((user) => {
           return {
             ...user,
@@ -30,21 +31,24 @@ export const AuthChecker = () => {
         });
       }),
 
-    onSuccess(data) {
-      console.log(data);
+    onSuccess(data, variables, context) {
+      // alert("refreshToken 갱신성공");
+      // console.log(data, variables, context);
     },
     onError(error) {
-      alert("refreshToken 실패");
+      // alert("refreshToken 실패");
+      // alert(error);
       resetUser();
     },
   });
 
   useEffect(() => {
-    console.log("AuthChecker 작동", user);
+    // console.log("AuthChecker 작동", user);
     if (user.access_token !== null) {
       //엑세스 토큰이 localStorage에 존재
       const decoded_at: jose.JWTPayload = jose.decodeJwt(user.access_token);
-      if ((decoded_at.exp as number) < Date.now()) {
+      if ((decoded_at.exp as number) < Date.now() / 1000) {
+        console.log(decoded_at.exp, Date.now());
         alert("토큰이 만료되었습니다.");
         // resetUser();
         refreshTokenMutate();

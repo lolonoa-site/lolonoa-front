@@ -16,5 +16,10 @@ export const refreshToken = async (
       access_token,
       refresh_token,
     }),
-  }).then((res) => res.json() as Promise<refreshTokenResponseDTO>);
+  }).then((res) => {
+    if (res.ok) {
+      return res.json() as Promise<refreshTokenResponseDTO>;
+    }
+    throw new Error("Error");
+  });
 };
